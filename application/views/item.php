@@ -19,6 +19,8 @@
                         <li><a href="<?php echo base_url()?>index.php/user_auth/gadgets">Gadgets</a></li>
                         <li><a href="<?php echo base_url()?>index.php/user_auth">Login</a></li>
                         <?php if (isset($this->session->userdata['logged_in'])) { ?>
+                            <li> hi <?php echo ($this->session->userdata['logged_in']['username']);?></li>
+                            
                                 <li><a href="<?php echo base_url()?>index.php/user_auth/logout">Log Out</a></li> 
                             <?php } else { ?>
                                 <li><a href="<?php echo base_url()?>index.php/user_auth/user_registration_show">Sign Up</a></li>

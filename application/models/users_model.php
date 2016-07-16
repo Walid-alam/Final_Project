@@ -63,9 +63,19 @@ class Users_model extends CI_Model{
 		$man=$this->db->where('category_name','FASHION FOR MEN')->get('product');
 		return $man->result();
 	}
+	public function get_man_acc_category()
+	{
+		$man=$this->db->where('category_name','ACCESORIES-MEN')->get('product');
+		return $man->result();
+	}
 	public function get_woman_category()
 	{
 		$man=$this->db->where('category_name','FASHION FOR WOMEN')->get('product');
+		return $man->result();
+	}
+	public function get_woman_acc_category()
+	{
+		$man=$this->db->where('category_name','ACCESORIES-WOMEN')->get('product');
 		return $man->result();
 	}
 	public function get_gadget_category()

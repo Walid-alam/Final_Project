@@ -39,6 +39,19 @@
 			
 			$this->load->view('template/footer');
 		}
+		public function mens_acc()
+		{
+			/*$this->load->view('template/header',array(
+				'title'=>'Mens Section'
+
+				));*/
+			$man['cat']=$this->users_model->get_man_acc_category();
+			//print_r($man);
+
+			$this->load->view('mens_acc',$man);
+			
+			$this->load->view('template/footer');
+		}
 		public function womens()
 		{
 			$this->load->view('template/header',array(
@@ -49,6 +62,19 @@
 			//print_r($woman);
 
 			$this->load->view('womens',$woman);
+			
+			$this->load->view('template/footer');
+		}
+		public function womens_acc()
+		{
+			/*$this->load->view('template/header',array(
+				'title'=>'Mens Section'
+
+				));*/
+			$woman['cat']=$this->users_model->get_woman_acc_category();
+			//print_r($woman);
+
+			$this->load->view('womens_acc',$woman);
 			
 			$this->load->view('template/footer');
 		}

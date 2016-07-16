@@ -17,15 +17,30 @@
         <header> 
             <div id="slider">
                 <img src="Resourse/img/Awesome%20Mountain.jpeg" > 
-                <img src="Resourse/img/beach-sunset-landscape-1.jpg" >
+                <!--<img src="Resourse/img/beach-sunset-landscape-1.jpg" >-->
              </div>
             
                 <div class="logo">
                     <h3 class="box ">HODDY</h3>
                     
                     <ul class="main-nav box option ">
-                        <li><a href="<?php echo base_url()?>index.php/user_auth/mens">Mans</a></li>
-                        <li><a href="<?php echo base_url()?>index.php/user_auth/womens">Womens</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropbtn">Mens</a>
+                                <div class="dropdown-content">
+                                    <a href="<?php echo base_url()?>index.php/user_auth/mens">Products</a>
+                                    <a href="<?php echo base_url()?>index.php/user_auth/mens_acc">Accesories</a>
+                                </div>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="#" class="dropbtn">Womens</a>
+                                <div class="dropdown-content">
+                                    <a href="<?php echo base_url()?>index.php/user_auth/womens">Products</a>
+                                    <a href="<?php echo base_url()?>index.php/user_auth/womens_acc">Accesories</a>
+                                </div>
+                        </li>
+
+                        <!--<li><a href="<?php echo base_url()?>index.php/user_auth/womens">Womens</a></li>-->
                         <li><a href="<?php echo base_url()?>index.php/user_auth/gadgets">Gadgets</a></li>
                         <li><a href="<?php echo base_url()?>index.php/user_auth">Login</a></li>
                         <li><a href="<?php echo base_url()?>index.php/shoppingcart/view_cart"><i class="ion-ios-cart"></i></a></li>
