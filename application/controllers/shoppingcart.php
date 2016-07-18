@@ -117,8 +117,7 @@ class ShoppingCart extends CI_Controller
 			'title' =>'Payment Section'
 		));
 		$this->load->view('payment_info');
-		$username = ($this->session->userdata['logged_in']['username']);
-		echo "hello <b>".$username.'.</b>you have to give your payment information for completing your order.!!';
+		
 
 		
 		$this->load->view('template/footer');

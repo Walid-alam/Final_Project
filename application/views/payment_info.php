@@ -1,5 +1,11 @@
 <div class="content">
-            <h3 align="center">Payment point here.</h3>
+<center>
+<?php 
+        $username = ($this->session->userdata['logged_in']['username']);
+        echo "hello <b>".$username.'.</b>you have to give your payment information for completing your order.!!';
+?>
+</center>
+            <h1 align="center">Payment point here.</h1>
             <hr/>
             <form action="insert_payment" method="post"> 
             <table class="table" align="center" border="1">

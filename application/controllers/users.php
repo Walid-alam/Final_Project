@@ -247,7 +247,7 @@ class Users extends CI_Controller {
 
 
 			$data['product_list'] = $this->cart_model->get_all_product();
-				$this->load->view('template/header', array
+				/*$this->load->view('template/header', array
 				(
 					'title' => 'View all products'
 				));
@@ -256,7 +256,8 @@ class Users extends CI_Controller {
 
 			//$this->load->view('show_product_user',$data);
 
-			$this->load->view('template/footer');
+			$this->load->view('template/footer');*/
+			$this->load->view('user_index',$cat);
 		}
 	public function buy_user($id)
 	{
@@ -277,6 +278,7 @@ class Users extends CI_Controller {
 		$this->load->view('template/footer');
 
 	}
+
 	public function user_cart_delete($rowid)
 	{
 		$this->load->view('template/header', array
@@ -394,25 +396,30 @@ class Users extends CI_Controller {
 		redirect('/users/order_status',true);
 		$this->load->view('template/footer');
 	}
+	public function view_user_cart()
+	{
+		$this->load->view('template/header',array(
+			'title' =>'View Cart'
+		));
+		$this->load->view('user_cart');
+		$this->load->view('template/footer');
+	}
+	public function product_info()
+	{
+		$this->load->view('template/header', array(
+			'title' =>'Product Info'
+		));
+		$id=$this->input->get('product_id');
+
+		$cat['n'] = $this->cart_model->get_single_product($id);
+		//print_r($cat);
+
+		$this->load->view('show_product_info',$cat);
+		$this->load->view('template/footer');
+	}
 
 	
 
 }
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

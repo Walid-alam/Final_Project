@@ -1,45 +1,19 @@
-<!--<center>
-
-<style>
-	table 
-	{
-	    border-collapse: collapse;
-	    width: 100%;
-	}
-
-th, td 
-	{
-	    text-align: center;
-	    padding: 8px;
-	}
-
-tr:nth-child(even)
-{
-	background-color: #f2f2f2
-}
-
-th 
-	{
-	    background-color: #ff3300;
-	    color: white;
-	}
-</style>-->
 
 <section>
             <div class="row">
                 <div class="content-border">
                     <div class="col span-1-of-2">
                         <div class="box-medium">
-                            <img src= "<?php echo $c_key->p_image;?>" width=500 height=500>   
+                            <img src= "<?php echo $n->p_image;?>" width=500 height=500>   
                         </div>                     
                     </div>
                     
                     <div class="col span-1-of-2">
                         <div>&nbsp;</div>
-                        <h1 class="caption"><?php echo $c_key->p_name; ?></h1>
-                        <h1 class="caption"><?php echo $c_key->category_name; ?></h1>
+                        <h1 class="caption"><?php echo $n->p_name; ?></h1>
+                        <h1 class="caption"><?php echo $n->category_name; ?></h1>
                         <div>&nbsp;</div>
-                        <h2><?php echo $c_key->p_price; ?></h2>
+                        <h2><?php echo $n->p_price; ?></h2>
                         
                         <div class="product-size">
                             <h2 class="size">Size</h2>
@@ -57,13 +31,13 @@ th
                         <div>&nbsp;</div>
                         <div>&nbsp;</div>
                         
-                        <div class="cart-position"><a href="buy_user/<?php echo $c_key->p_id ?>"><img src="/Fahim/assets/images/cart1.png" alt="nothing to show" height="100px" width="200px"></a></div>
+                        <div class="cart-position"><a href="buy_user/<?php echo $n->p_id ?>"><img src="/Fahim/assets/images/cart1.png" alt="nothing to show" height="100px" width="200px"></a></div>
                         
                           <!--problem probaility -->
                         
                         <div class="text-box box">
                             <p>
-                                <?php echo $c_key->p_description; ?> 
+                                <?php echo $n->p_description; ?> 
                             </p>
 
                             <div class="icone-box">

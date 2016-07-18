@@ -51,6 +51,9 @@
                                 <li><a href="<?php echo base_url()?>index.php/user_auth/user_registration_show">Sign Up</a></li>
                               
                             <?php } ?>
+
+
+                        
                         <li><a href="<?php echo base_url()?>index.php/shoppingcart/view_cart"><i class="ion-ios-cart"></i></a></li>
 
                     </ul>

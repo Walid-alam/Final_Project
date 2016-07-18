@@ -33,7 +33,7 @@
 		//$total=$this->session->userdata['logged_in']['total'];
 	} else 
 		{
-			header("location: login");
+			header("location: /Fahim/index.php/user_auth");
 		}
 		//$sid=($this->session->userdata['shipping']['ship']);
 		//$pid=($this->session->userdata['payment']['pay']);
