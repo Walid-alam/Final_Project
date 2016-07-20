@@ -32,7 +32,7 @@
 		$id = ($this->session->userdata['logged_in']['id']);
 	} else 
 		{
-			header("location:/Fahim/index.php/user_auth");
+			header("location:/Fahim/index.php/user_auth/not_logged");
 		}
 ?>
 						<div id="profile">

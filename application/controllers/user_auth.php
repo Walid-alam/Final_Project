@@ -250,6 +250,15 @@
 			
 			//$this->load->view('template/footer');
 		}
+		public function not_logged()
+		{
+			$this->load->view('template/header',array(
+					'title'=>'You Are Not Logged In..!!!!!'
+					));
+			$this->load->view('user_login_form');
+			$this->load->view('template/footer');
+
+		}
 	}
 
 

@@ -22,6 +22,7 @@
         <link rel="stylesheet" type="text/css" href="/Fahim/vendores/css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="/Fahim/Resourse/css/query.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="/Fahim/Resourse/css/bootstrap.min.css">
 
            
     </head>
