@@ -366,7 +366,7 @@ class Users extends CI_Controller {
 	{
 		$this->load->view('template/header', array
 		(
-			'title' => 'shipping_info'
+			'title' => 'Shipping_Info'
 		));
 		$this->load->view('shipping_info');
 		$this->load->view('template/footer');
@@ -391,7 +391,7 @@ class Users extends CI_Controller {
 		//print_r ($order);
 
 		$this->load->view('template/header', array(
-			'title' => $order->u_id . ' Profile'
+			'title' => ' Profile'
 		));
 		redirect('/users/order_status',true);
 		$this->load->view('template/footer');

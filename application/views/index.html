@@ -3,13 +3,13 @@
     <head>
         <script type="text/javascript" src="/Fahim/vendores/js/jquery-1.12.4.min%20.js"></script>
         <script type="text/javascript" src="/Fahim/Resourse/js/main.js"></script>
+        <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDxBaqf9bKLVsBVOYMe1C5VE2wTQ7jXa0A" async="" defer="defer" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="/Fahim/vendores/css/node_modules/normalize.css/">
         <link rel="stylesheet" type="text/css" href="/Fahim/vendores/css/grid.css"> 
         <link rel="stylesheet" type="text/css" href="/Fahim/Resourse/css/style.css">
         <link rel="stylesheet" type="text/css" href="/Fahim/vendores/css/ionicons.min.css">
         <link rel="stylesheet" type="text/css" href="/Fahim/Resourse/css/query.css">
         <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="/Fahim/Resourse/css/bootstrap.min.css">
         <title>Welcome To Our Site</title>
         
     </head>   
@@ -17,13 +17,18 @@
         <header> 
             <div id="slider">
                 <img src="/Fahim/Resourse/img/Awesome%20Mountain.jpeg" > 
-                <!--<img src="Resourse/img/beach-sunset-landscape-1.jpg" >-->
+                <img src="/Fahim/Resourse/img/london.jpg" >
              </div>
             
                 <div class="logo">
                     <h3 class="box ">HODDY</h3>
                     
                     <ul class="main-nav box option ">
+                        <li>
+                            <form action="/Fahim/index.php/user_auth/search_result" method="post">
+                                <input type="text" name="search" placeholder="Search..">
+                            </form>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropbtn">Mens</a>
                                 <div class="dropdown-content">
@@ -51,7 +56,7 @@
                                 <li><a href="<?php echo base_url()?>index.php/user_auth/user_registration_show">Sign Up</a></li>
                               
                             <?php } ?>
-                        <li><a href="<?php echo base_url()?>index.php/shoppingcart/view_cart"><i class="ion-ios-cart"></i></a></li>
+                        <!--<li><a href="<?php echo base_url()?>index.php/shoppingcart/view_cart"><i class="ion-ios-cart"></i></a></li>-->
 
                     </ul>
                 </div>        
@@ -96,35 +101,35 @@
                     <ul>
                         <li>
                             <figure class="fast-row check">
-                                <p class="text-width">Womens</p>
+                                
                                 <img src="/Fahim/Resourse/img/women.jpeg" height="270" width="300">
                             </figure>
                         </li>
                         
                         <li>
                             <figure class="fast-row check">
-                                <p class="text-width">Mens</p>
+                               
                                 <img src="/Fahim/Resourse/img/men.jpg" height="290" width="350"> 
                             </figure>
                         </li>
                         
                        <li>
                             <figure class="box-2 check">
-                                <p class="text-width">Gadgets</p>
+                                
                                 <img src="/Fahim/Resourse/img/gadgets.jpeg" height="270" width="300"> 
                             </figure>
                         </li>  
                         
                         <li>
                             <figure class="box-2 check">
-                                <p class="text-width">Accesories-Man</p>
+                                
                                 <img src="/Fahim/Resourse/img/accesories-man.jpg" height="270" width="300"> 
                             </figure>
                         </li>  
                         
                         <li>
                             <figure class="box-2 check">
-                                <p class="text-width">Accesories-Woman</p>
+                                
                                 <img src="/Fahim/Resourse/img/accesories-woman.jpeg" height="270" width="300">    
                             </figure>
                         </li>              
@@ -140,7 +145,7 @@
             </div>
             <div class="row">
                 <div class="content-border">
-                    <div class="box-container">
+                   <!-- <div class="box-container">
                         <div class="box-big check-2">
                             <img src="/Fahim/Resourse/img/tshirt.jpeg" height="500" width="500"> 
                         </div>
@@ -170,8 +175,8 @@
                             </div>
                         </li>
                     </ul>           
-                </div>            
-            </div>
+                </div> -->           
+                </div>
                 <div class="content-border">
                     <div class="box-container_2 check-2">
                         <div class="box-big">
@@ -267,7 +272,21 @@
                                 <li class="policy-item">Return Policy</li>
                                 <li class="policy-item">Our store</li>
                             </ul> 
-                        </div>      
+                        </div> 
+                        <div id="googleMap" style="width:500px;height:380px;">
+
+                            <script>
+                            function initialize() {
+                              var mapProp = {
+                                center:new google.maps.LatLng(23.7099,90.4071),
+                                zoom:10,
+                                mapTypeId:google.maps.MapTypeId.ROADMAP
+                              };
+                              var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                            }
+                            google.maps.event.addDomListener(window, 'load', initialize);
+                        </script>
+                        </div>     
                     </div>
                 </div>    
             </footer>

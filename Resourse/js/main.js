@@ -73,9 +73,9 @@ $(document).ready(function(){
 				var next = current.next().length ? current.next() : $('#header_text .shopping-text:eq(0)');
 
 				//hide the current image
-				current.fadeOut(750);
+				current.fadeOut(1000);
 				//show the next one
-				next.fadeIn(750);
+				next.fadeIn(1500);
 
 			}, 9000);                
                 

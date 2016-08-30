@@ -92,12 +92,12 @@ class ShoppingCart extends CI_Controller
 	{
 			
 		$user_id = ($this->session->userdata['logged_in']['id']);
-		$full_name=$this->input->post('fname');
-		$email=$this->input->post('email');
-		$address=$this->input->post('address');
-		$mobile=$this->input->post('mobile');
-		$city=$this->input->post('city');
-		$country=$this->input->post('country');
+		$full_name=($this->session->userdata['logged_in']['username']);
+		$email=($this->session->userdata['logged_in']['email']);
+		$address=($this->session->userdata['logged_in']['address']);
+		$mobile=($this->session->userdata['logged_in']['mobile']);
+		$city=($this->session->userdata['logged_in']['city']);
+		$country=($this->session->userdata['logged_in']['country']);
 		
 
 		$this->cart_model->insert_database(array(

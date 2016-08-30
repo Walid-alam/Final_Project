@@ -24,6 +24,11 @@
                     <h3 class="box ">HODDY</h3>
                     
                     <ul class="main-nav box option ">
+                        <li>
+                            <form action="/Fahim/index.php/user_auth/search_result" method="post">
+                                <input type="text" name="search" placeholder="Search..">
+                            </form>
+                        </li>
                         <li class="dropdown">
                             <a href="#" class="dropbtn">Mens</a>
                                 <div class="dropdown-content">

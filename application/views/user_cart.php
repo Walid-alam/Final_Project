@@ -36,12 +36,6 @@
 		}
 ?>
 						<div id="profile">
-						<?php
-
-						echo "Your Username Id is " . $id;
-						
-						echo "<br/>";
-						?>
 <center>
 	<h3>Cart Infromation</h3>
 	<?php echo anchor('users/user_panel','Continue Shopping')?>

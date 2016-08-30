@@ -4,6 +4,7 @@
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script type="text/javascript" src="/Fahim/vendores/js/jquery-1.12.4.min%20.js"></script>
     <script type="text/javascript" src="/Fahim/Resourse/js/main.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDxBaqf9bKLVsBVOYMe1C5VE2wTQ7jXa0A" async="" defer="defer" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="/Fahim/vendores/css/node_modules/normalize.css/">
         <link rel="stylesheet" type="text/css" href="/Fahim/vendores/css/grid.css"> 
         <link rel="stylesheet" type="text/css" href="/Fahim/Resourse/css/style.css">
@@ -73,8 +74,25 @@
                                 <li class="policy-item">Return Policy</li>
                                 <li class="policy-item">Our store</li>
                             </ul> 
-                        </div>      
+                        </div> 
+                        
+                        <div id="googleMap" style="width:500px;height:380px;">
+                            <script>
+                            function initialize() {
+                              var mapProp = {
+                                center:new google.maps.LatLng(23.7099,90.4071),
+                                zoom:10,
+                                mapTypeId:google.maps.MapTypeId.ROADMAP
+                              };
+                              var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+                            }
+                            google.maps.event.addDomListener(window, 'load', initialize);
+                        </script>
+                        </div>
+ 
+
+                        
                     </div>
-                </div>    
+                </div>  
             </footer>
 </body>

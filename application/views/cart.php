@@ -39,7 +39,7 @@
 		//$pid=($this->session->userdata['payment']['pay']);
 ?>
 						<div id="profile">
-						<?php
+						<!--<?php
 
 						echo "Your Username Id is " . $id;
 						
@@ -53,7 +53,7 @@
 						//echo "Your payment Id is " .$pid;
 						//print_r($this->session->userdata('pay'));
 
-						?>
+						?>-->
 <center>
 	<h3>Cart Infromation</h3>
 	<?php echo anchor('users','<h2>Continue Shopping</h2>')?>

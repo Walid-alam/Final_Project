@@ -1,6 +1,6 @@
 <div class="content">
 
-<center><h2>CRUD Application</h2> </center>
+<center><h2>User Information</h2> </center>
 <table class="table">
 
 <tr>

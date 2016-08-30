@@ -41,22 +41,32 @@
 					echo form_label('Email : ');
 					echo"<br/>";
 					$data = array(
-					'type' => 'email',
+					'type' => 'text',
 					'name' => 'email_value'
 					);
 					echo form_input($data);
 					echo"<br/>";
 					echo"<br/>";
-					echo form_label('mobile : ');
+					echo form_label('Mobile : ');
 					echo"<br/>";
 					echo form_input('mobile');
-					echo "<br/>";;
-					echo form_label('address : ');
+					echo "<br/>";
+					echo form_label('Address : ');
 					echo"<br/>";
 					echo form_input('address');
 					echo"<br/>";
+					echo form_label('City');
+					echo "<br/>";
+					echo form_input('city');
+					echo"<br/>";
+					echo form_label('Country');
+					echo "<br/>";
+					echo form_input('country');
+					echo"<br/>";
+					echo"<br/>";
 					echo form_submit('submit','Sign Up');
 					echo form_close();
+					echo"<br/>";
 			?>
 <a class="btn btn-success" href="<?php echo base_url()?>index.php/user_auth">For Login Click Here</a>
 </div>

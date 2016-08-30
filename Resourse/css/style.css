@@ -15,6 +15,32 @@ html, body{
     text-rendering: optimizeLegibility;
 }
 
+
+/*------------------------*/
+/* Search Bar */
+/*-----------------------*/
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    color: #000;
+    background-image: url('searchicon.png');
+    background-position: 5px 5px;
+    background-repeat: no-repeat;
+    padding: 5px 18px 5px 38px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 90%;
+}
+
+
+
 /*------------------------*/
 /* REUSABLE COMPONAND */
 /*-----------------------*/
@@ -71,9 +97,23 @@ section{
 }
 
 .box-medium{
-    width: 50;
-    height: 507px;
-    border: none;
+    display: inline-block;
+    width: 330;
+    height: 227;
+    border: 7px solid red;
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {border-color: black;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {border-color: black;}
+} 
 }
 
 .box-small{
@@ -87,6 +127,14 @@ section{
     width: auto;
     height: 0px;
     border: 2px solid #fff;
+    display: block;
+    text-align: center;
+}
+.my_div{
+    margin: 3%;
+    width: 300px;
+    height: 0px;
+    border: 42px solid green;
     display: block;
     text-align: center;
 }
@@ -169,6 +217,11 @@ h2,
 }
 .caption{
     color: #2D05F5;
+    font-size: 2em;
+    margin: 0px;
+}
+.caption1{
+    color: #f50531;
     font-size: 2em;
     margin: 0px;
 }

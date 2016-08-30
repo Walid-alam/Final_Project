@@ -54,10 +54,10 @@
 		}
 		public function womens()
 		{
-			$this->load->view('template/header',array(
+			/*$this->load->view('template/header',array(
 				'title'=>'Womens Section'
 
-				));
+				));*/
 			$woman['cat']=$this->users_model->get_woman_category();
 			//print_r($woman);
 
@@ -80,10 +80,10 @@
 		}
 		public function gadgets()
 		{
-			$this->load->view('template/header',array(
+			/*$this->load->view('template/header',array(
 				'title'=>'Gadgets Section'
 
-				));
+				));*/
 			$gadget['cat']=$this->users_model->get_gadget_category();
 			//print_r($gadget);
 
@@ -122,6 +122,8 @@
 				$this->form_validation->set_rules('email_value', 'Email', 'trim|required|xss_clean');
 				$this->form_validation->set_rules('mobile', 'mobile number', 'trim|required|xss_clean');
 				$this->form_validation->set_rules('address', 'address is', 'trim|required|xss_clean');
+				$this->form_validation->set_rules('city', 'City is', 'trim|required|xss_clean');
+				$this->form_validation->set_rules('country', 'Country is', 'trim|required|xss_clean');
 				if ($this->form_validation->run() == FALSE) {
 				$this->load->view('registration_form');
 			} else{
@@ -130,7 +132,9 @@
 						'u_password' => $this->input->post('password'),
 						'u_email' => $this->input->post('email_value'),
 						'u_mobile'=> $this->input->post('mobile'),
-						'u_address'=> $this->input->post('address')
+						'u_address'=> $this->input->post('address'),
+						'City'=> $this->input->post('city'),
+						'Country'=> $this->input->post('country')
 					);
 				$result  = $this->users_model->insert_database($data);
 				if ($result == true) {
@@ -180,7 +184,11 @@
 									'username'=>$result[0]->u_name,
 									'email' => $result[0]->u_email,
 									'type'=> $result[0]->u_type,
-									'id'=> $result[0]->u_id
+									'id'=> $result[0]->u_id,
+									'address'=>$result[0]->u_address,
+									'mobile'=>$result[0]->u_mobile,
+									'city'=>$result[0]->City,
+									'country'=>$result[0]->Country
 								);
 
 								$this->session->set_userdata('logged_in',$session_data);
@@ -200,6 +208,7 @@
 
 											));
 											$this->load->view('user_page');
+											header('location:/Fahim/index.php/shoppingcart/view_cart');
 											$this->load->view('template/footer');
 										}
 									
@@ -256,6 +265,19 @@
 					'title'=>'You Are Not Logged In..!!!!!'
 					));
 			$this->load->view('user_login_form');
+			$this->load->view('template/footer');
+
+		}
+		public function search_result()
+		{
+			$result = $this->input->post('search');
+			//echo $result;
+			$query['a']=$this->users_model->get_result($result);
+			//print_r($query);
+			$this->load->view('template/header',array(
+					'title'=>'Searched Result'
+					));
+			$this->load->view('show_search_result',$query);
 			$this->load->view('template/footer');
 
 		}

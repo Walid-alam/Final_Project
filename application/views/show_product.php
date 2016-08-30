@@ -52,7 +52,7 @@
 		<td><a href="/Fahim/index.php/users/delete_product/<?php echo $p_key->p_id; ?>"class="btn btn-danger"onclick="return confirm('Are you sure  to Delete?')">Delete</a>
 		</td>
 
-		<td><a href="/Fahim/index.php/shoppingcart/buy/<?php echo $p_key->p_id ?>"><img src="/Fahim/assets/images/cart1.png" alt="nothing to show" height="35px" width="70px"></td>
+		<td><a href="/Fahim/index.php/shoppingcart/buy/<?php echo $p_key->p_id ?>"><img src="/Fahim/assets/images/cart1.png" alt="nothing to show" height="50px" width="70px"></td>
 	</tr>
 	
 	<?php }?>

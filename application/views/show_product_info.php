@@ -13,20 +13,9 @@
                         <h1 class="caption"><?php echo $n->p_name; ?></h1>
                         <h1 class="caption"><?php echo $n->category_name; ?></h1>
                         <div>&nbsp;</div>
-                        <h2><?php echo $n->p_price; ?></h2>
+                        <h2 class="caption1"><i><?php echo $n->p_price;?></i><span>tk</span></h2>
                         
-                        <div class="product-size">
-                            <h2 class="size">Size</h2>
-                            <ul class="product-size default-nav box">
-                                <li class="box"><a href="#">7</a></li>
-                                <li class="box"><a href="#">7.5</a></li>
-                                <li class="box"><a href="#">8</a></li>
-                                <li class="box"><a href="#">8.5</a></li>
-                                <li class="box"><a href="#">9</a></li>
-                                <li class="box"><a href="#">9.5</a></li> 
-                                <li class="box"><a href="#">10</a></li>
-                            </ul>
-                        </div>
+                        
                         <div>&nbsp;</div>
                         <div>&nbsp;</div>
                         <div>&nbsp;</div>

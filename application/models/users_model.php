@@ -44,7 +44,9 @@ class Users_model extends CI_Model{
 			'u_password'=>$info['u_password'],
 			'u_mobile'=>$info['u_mobile'],
 			'u_address'=>$info['u_address'],
-			'u_type'=>'user'
+			'u_type'=>'user',
+			'City'=>$info['City'],
+			'Country'=>$info['Country']
 			
 			);
 		$this->db->insert('user',$data);
@@ -85,8 +87,13 @@ class Users_model extends CI_Model{
 	}
 	public function get_all_order()
 	{
-		$query = $this->db->get('order');
-		return $query->result();
+		//$query = $this->db->get('order');
+		//return $query->result();
+	$this->db->select("*");
+    $this->db->from("order");
+    $this->db->order_by("o_date", "desc");
+    $query = $this->db->get();
+    return $query->result();
 	}
 	public function get_single_order($id)
 	{
@@ -105,7 +112,15 @@ class Users_model extends CI_Model{
 		$this->db->where('u_id',$id)->update('order',array(
 			'o_status'=>'Approved'
 			));
-
+	}
+	public function get_result($r)
+	{
+		$this->db->like('category_name',$r);
+		$this->db->or_like('m_name',$r);
+		$this->db->or_like('p_name',$r);
+		$query = $this->db->get('product');
+		return $query->result();
+		$this->db->reconnect();
 	}
 
 

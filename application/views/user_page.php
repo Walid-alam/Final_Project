@@ -8,6 +8,12 @@
 		$username = ($this->session->userdata['logged_in']['username']);
 		$type = ($this->session->userdata['logged_in']['type']);
 		$id = ($this->session->userdata['logged_in']['id']);
+		$email = ($this->session->userdata['logged_in']['email']);
+		$address = ($this->session->userdata['logged_in']['address']);
+		$mobile = ($this->session->userdata['logged_in']['mobile']);
+		$city = ($this->session->userdata['logged_in']['city']);
+		$country = ($this->session->userdata['logged_in']['country']);
+
 	} else 
 		{
 			header("location: login");
@@ -25,7 +31,13 @@
 	echo "Your type is <b>".$type."</b>";
 	echo "<br/>";
 	echo "<br/>";
-	echo "Your type is <b>".$id."</b>";
+	echo "Your id is <b>".$id."</b>";
+	echo "<br/>";
+	echo "<br/>";
+	echo "Your email is <b>".$email."</b>";
+	echo "<br/>";
+	echo "<br/>";
+	echo "Your mobile is <b>".$mobile."</b>";
 ?>
 
 <br/>

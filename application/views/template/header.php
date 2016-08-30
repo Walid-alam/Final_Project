@@ -16,6 +16,7 @@
 
     <script type="text/javascript" src="/Fahim/vendores/js/jquery-1.12.4.min%20.js"></script>
     <script type="text/javascript" src="/Fahim/Resourse/js/main.js"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDxBaqf9bKLVsBVOYMe1C5VE2wTQ7jXa0A" async="" defer="defer" type="text/javascript"></script>
         <link rel="stylesheet" type="text/css" href="/Fahim/vendores/css/node_modules/normalize.css/">
         <link rel="stylesheet" type="text/css" href="/Fahim/vendores/css/grid.css"> 
         <link rel="stylesheet" type="text/css" href="/Fahim/Resourse/css/style.css">
@@ -28,23 +29,57 @@
     </head>
     <body>
         <div class="menu">
-                   <i> <h3 class="box ">HODDY</h3></i>
+                   <i><a href="<?php echo base_url()?>"> <h3 class="box ">HODDY</h3></i>
+
+
                     
                     <ul class="main-nav box option">
-                    
-                        <li><a href="<?php echo base_url()?>index.php/user_auth/mens">Mans</a></li>
-                        <li><a href="<?php echo base_url()?>index.php/user_auth/womens">Womens</a></li>
+
+                       <!-- <li>
+                            <div class="col-sm-12 col-md-12">
+                                <form class="navbar-form" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Type Product Name" name="q">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                                    </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>-->
+                        <li>
+                            <form action="<?php echo base_url()?>index.php/user_auth/search_result" method="post">
+                                <input type="text" name="search" placeholder="Search..">
+                            </form>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropbtn">Mens</a>
+                                <div class="dropdown-content">
+                                    <a href="<?php echo base_url()?>index.php/user_auth/mens">Products</a>
+                                    <a href="<?php echo base_url()?>index.php/user_auth/mens_acc">Accesories</a>
+                                </div>
+                        </li>
+                        
+                        <li class="dropdown">
+                            <a href="#" class="dropbtn">Womens</a>
+                                <div class="dropdown-content">
+                                    <a href="<?php echo base_url()?>index.php/user_auth/womens">Products</a>
+                                    <a href="<?php echo base_url()?>index.php/user_auth/womens_acc">Accesories</a>
+                                </div>
+                        </li>
                         <li><a href="<?php echo base_url()?>index.php/user_auth/gadgets">Gadgets</a></li>
                         <li><a href="<?php echo base_url()?>index.php/user_auth">Login</a></li>
                         <?php if (isset($this->session->userdata['logged_in'])) { ?>
                            <li> hi <?php echo ($this->session->userdata['logged_in']['username']);?></li>
 
                                 <li><a href="<?php echo base_url()?>index.php/user_auth/logout">Logout</a></li> 
+                                <li><a href="<?php echo base_url()?>index.php/shoppingcart/view_cart"><i class="ion-ios-cart"></i></a></li>
                             <?php } else { ?>
                                 <li><a href="<?php echo base_url()?>index.php/user_auth/user_registration_show">Sign Up</a></li>
+
                               
                             <?php } ?>
-                        <li><a href="<?php echo base_url()?>index.php/shoppingcart/view_cart"><i class="ion-ios-cart"></i></a></li>
+                        
 
                     </ul>
         </div>
